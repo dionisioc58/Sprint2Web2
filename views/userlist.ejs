@@ -1,16 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Lista de usuários</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Usuários Cadastrados</h1>
-    <table border='1' style='border-collapse: collapse;'>
-        <thead style='font-weight: bold'><td style='width: 30px'>Id</td><td style='width:100px'>Name</td><td style='width: 300px'>Email</td></thead>
-        <% users.forEach(function(user) { %>
-            <tr><td><%= user.id %> </td><td> <%= user.name %> </td><td> <%= user.email %></td></tr>
-        <% }); %>
-    </table>
-  </body>
-</html>
+<%- include layouts/header.ejs %>
+
+  <div class="page-data">
+    <div class="data-table">
+      <table border='1' style='border-collapse: collapse;'>
+          <thead style='font-weight: bold'>
+            <td style='width: 30px'>Id</td>
+            <td style='width:100px'>Name</td>
+            <td style='width: 300px'>Email</td>
+            <td style='width: auto'></td>
+          </thead>
+          <% users.forEach(function(user) { %>
+              <tr>
+                <td><%= user.id %> </td>
+                <td> <%= user.name %> </td>
+                <td> <%= user.email %></td>
+                <td>
+                    <a href='../users/edit/<%= user.id %>'>Edit</a>
+                    <a href='../users/delete/<%= user.id %>'>Delete</a>
+                </td>
+              </tr>
+          <% }); %>
+      </table>
+    </div>
+    <button onClick="window.location.href='/users/add';">+ Add</button>
+  </div>
+
+<%- include layouts/footer.ejs %>
