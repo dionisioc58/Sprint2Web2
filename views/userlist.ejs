@@ -6,10 +6,11 @@
   </head>
   <body>
     <h1>Usuários</h1>
-    <ul>
+    <table border='1' style='border-collapse: collapse;'>
+        <thead style='font-weight: bold'><td>Id</td><td>Name</td><td>Email</td></thead>
         <% users.forEach(function(user) { %>
-            <li><%= user.id %> - <%= user.name %></li>
+            <tr><td><%= user.id %> </td><td> <%= user.name %> </td><td> <%= user.email %></td></tr>
         <% }); %>
-    </ul>
+    </table>
   </body>
 </html>

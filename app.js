@@ -11,11 +11,16 @@ var app = express();
 
 //Prepare database connection
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'web2',
-  password : 'secreta'
-});
+var connection = require('express-myconnection');
+app.use(
+  connection(mysql,{
+       host:'localhost',
+       user:'web2',
+       password:'@Secreta',
+       port:3306,
+       database:'web2'
+   },'single')
+);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

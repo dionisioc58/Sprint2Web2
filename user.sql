@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table`user`
 --
 
-INSERT INTO `customer` (`id`, `name`, `email`) VALUES
+INSERT INTO `user` (`id`, `name`, `email`) VALUES
 (1, 'Dionísio', 'dionisio@naracosta.com.br'),
 (2, 'Airton', 'airton@gmail.com'),
 (3, 'Bruno', 'bruno@hotmail.com'),
