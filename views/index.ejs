@@ -7,6 +7,11 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <button onClick="window.location.href='/users';">Cadastro de Usuários</button>
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <% for(var item in menu) { %>
+        <a href="<%= menu[item].href %>"><%= menu[item].title %></a>
+      <% }; %>
+    </div>
   </body>
 </html>
