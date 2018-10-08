@@ -5,9 +5,9 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Usuários</h1>
+    <h1>Usuários Cadastrados</h1>
     <table border='1' style='border-collapse: collapse;'>
-        <thead style='font-weight: bold'><td>Id</td><td>Name</td><td>Email</td></thead>
+        <thead style='font-weight: bold'><td style='width: 30px'>Id</td><td style='width:100px'>Name</td><td style='width: 300px'>Email</td></thead>
         <% users.forEach(function(user) { %>
             <tr><td><%= user.id %> </td><td> <%= user.name %> </td><td> <%= user.email %></td></tr>
         <% }); %>
