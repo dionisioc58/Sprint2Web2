@@ -31,7 +31,8 @@ a {
     
     padding:2px;
     padding-left:40px;
-    background:#665847;color:#FEFFFD;
+    background:#665847;
+    color:#FEFFFD;
 }
 .data-btn{padding-left:8px}
 .data-btn button{
@@ -72,7 +73,7 @@ textarea{ border:1px solid #ddd;width:296px;}
 /* Top Menu */
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #665847;
   }
   
   .topnav a {
